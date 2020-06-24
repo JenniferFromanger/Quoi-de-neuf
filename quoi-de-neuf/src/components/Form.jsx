@@ -1,9 +1,11 @@
 import React from "react";
 import "./Form.scss";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function Form() {
   const dispatch = useDispatch();
+  const score = useSelector((state) => state.score);
+  const hasEatenVegetables = useSelector((state) => state.vegetablesToday);
 
   return (
     <div className="form">
@@ -15,11 +17,29 @@ function Form() {
       <button
         className="yes"
         type="button"
-        onClick={() => dispatch({ type: "INCREMENT50" })}
+        onClick={() =>
+          dispatch({
+            type: "ANSWER_VEGETABLE",
+            answer: true,
+            points: 50,
+          })
+        }
+        disabled={hasEatenVegetables && "disabled"}
       >
-        YES
+        YES {score}
       </button>
-      <button className="no" type="button">
+      <button
+        className="no"
+        type="button"
+        onClick={() =>
+          dispatch({
+            type: "ANSWER_VEGETABLE",
+            answer: true,
+            points: 0,
+          })
+        }
+        disabled={!hasEatenVegetables && "disabled"}
+      >
         NO
       </button>
 

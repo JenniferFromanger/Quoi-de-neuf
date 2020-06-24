@@ -1,15 +1,19 @@
 const store = {
-  counter: 0,
+  vegetablesToday: false,
+  score: 0,
 };
 
-const reducer = (temporaryStore = { ...store }, action) => {
+const reducer = (state = { ...store }, action) => {
   switch (action.type) {
-    case "INCREMENT50":
-      return { ...temporaryStore, counter: temporaryStore.counter + 50 };
-    case "DECREMENT10":
-      return { ...temporaryStore, counter: temporaryStore.counter - 10 };
+    case "ANSWER_VEGETABLE":
+      return {
+        ...store,
+        vegetablesToday: action.answer,
+        score: state.score + action.points,
+      };
+
     default:
-      return temporaryStore;
+      return state;
   }
 };
 
