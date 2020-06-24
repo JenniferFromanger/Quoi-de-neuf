@@ -16,11 +16,13 @@ function Homepage() {
   };
   const { username, password } = values;
   return (
-    <div className="App">
-      <h1>Rock your health</h1>
+    <div className="Homepage">
+      <img className="Guitare" src="./guitare.png" alt="guitare" />
+      <h1 className="RockYourHealth">Rock your health</h1>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form className="Form" onSubmit={handleSubmit}>
           <input
+            className="Login"
             id="username"
             name="username"
             onChange={handleChange}
@@ -30,6 +32,7 @@ function Homepage() {
             required
           ></input>
           <input
+            className="Login"
             id="password"
             name="password"
             type="password"
@@ -39,7 +42,7 @@ function Homepage() {
          password"
             required
           ></input>
-          <button type="submit">GO</button>
+          <button className="GoButton" type="submit">GO</button>
         </form>
       </div>
     </div>

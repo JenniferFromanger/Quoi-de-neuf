@@ -1,0 +1,72 @@
+.RockYourHealth {
+    font-size: 6vh;
+    width: 15vw;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: bold;
+    color:red;
+    font-style: italic;
+}
+
+.Form {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.Login {
+    background-color: black;
+    width : 15vw;
+    margin : 1vh 0;
+}
+
+.GoButton {
+    width : 15vw;
+    background-color: #9DAABB;
+    color : white;
+    margin : 1vh 0;
+    font-weight: bold;
+    font-style: italic;
+}
+
+input::placeholder {
+    color:white;
+  }
+
+  @media screen and (max-width: 767px)
+  {
+
+    .Guitare{
+        width: 50vw;
+    }
+
+    .RockYourHealth {
+        font-size: 9vh;
+        width: 80vw;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        font-weight: bold;
+        color:#C3083F;
+        font-style: italic;
+        margin-top: 3vh;
+    }
+    
+    .Login {
+        background-color: #444444;
+        width : 80vw;
+        height: 5vh;
+        margin : 2vh 0;
+    }
+    
+    .GoButton {
+        width : 80vw;
+        height: 5vh;
+        background-color: #9DAABB;
+        color : white;
+        margin : 2vh 0;
+        font-weight: bold;
+        font-style: italic;
+    }
+  }
