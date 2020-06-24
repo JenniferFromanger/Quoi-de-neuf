@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "titleFont";
+  src: url("font/Rockit.ttf");
+}
+
+@font-face {
+  font-family: "MyText";
+  src: url("font/big_noodle_titling.ttf");
+}
+
+.form {
+  p {
+    font-family: "MyText";
+    font-size: 1.4em;
+    margin-top: 30px;
+  }
+
+  button {
+    margin: 10px 20px;
+    width: 100px;
+    height: 50px;
+    border: 0;
+    color: #fff;
+    font-weight: 900;
+  }
+  .yes {
+    background-color: #347b2d;
+  }
+
+  .no {
+    background-color: #c3083f;
+  }
+}
+
+.form-header {
+  padding: 2em;
+  color: #fff;
+  background-color: #000;
+  //   background-color: #bf033b;
+  //   background-image: linear-gradient(315deg, #bf033b 30%, #ffc719 94%);
+  font-family: "titleFont";
+  h1 {
+    padding-top: 2em;
+    font-size: 1.2em;
+  }
+  margin-bottom: 5vh;
+}

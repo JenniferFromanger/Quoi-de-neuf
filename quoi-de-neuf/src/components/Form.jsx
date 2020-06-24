@@ -1,10 +1,21 @@
 import React from "react";
+import "./Form.scss";
 
 function Form() {
   return (
     <div className="form">
-      <h1>MY rocking DAILY CHECK-UP</h1>
+      <div className="form-header">
+        <h1>MY DAILY CHECK-UP</h1>
+      </div>
       <p>Have you eaten vegetables today ?</p>
+
+      <button className="yes" type="button">
+        YES
+      </button>
+      <button className="no" type="button">
+        NO
+      </button>
+
       <p>Slow burning carbohydrates ?</p>
       <p>Any sweets ?</p>
       <p>How long did you exercice ?</p>
