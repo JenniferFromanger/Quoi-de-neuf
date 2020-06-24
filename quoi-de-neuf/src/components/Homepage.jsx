@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Homepage.scss";
+import { Link } from "react-router-dom";
 function Homepage() {
   const initialValues = { username: "", password: "" };
   const [values, setValues] = useState(initialValues);
@@ -39,7 +40,9 @@ function Homepage() {
          password"
             required
           ></input>
-          <button type="submit">GO</button>
+          <Link to="/Profile">
+            <button type="submit">GO</button>
+          </Link>
         </form>
       </div>
     </div>
