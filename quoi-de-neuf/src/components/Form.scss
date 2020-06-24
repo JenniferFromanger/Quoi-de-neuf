@@ -25,10 +25,18 @@
   }
   .yes {
     background-color: #347b2d;
+
+    &:hover {
+      background-color: #29c01a;
+    }
   }
 
   .no {
     background-color: #c3083f;
+
+    &:hover {
+      background-color: #f50029;
+    }
   }
 }
 
