@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const [avatarLevel, setAvatarLevel] = useState("Internationnal Rock Star");
@@ -11,8 +12,10 @@ export default function Profile() {
       <h1>{avatarLevel} </h1>
       <h2>{avatarComment}</h2>
       <div>
-        <p>Past Points</p>
-        <img src="" alt="button to your past points" />
+        <Link to="/Past-Points">
+          <p>Past Points</p>
+          <img src="" alt="button to your past points" />
+        </Link>
       </div>
       <div>
         <p>How was your day?</p>
