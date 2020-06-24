@@ -1,8 +1,10 @@
 import React from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-export default function PastPoints() {
+export default function TotalPoints() {
+  const counter = useSelector((state) => state.counter);
   const today = new Date();
   const formatToday = moment(today).format("L");
 
@@ -12,7 +14,7 @@ export default function PastPoints() {
     (accumulator, currentValue) => accumulator + currentValue
   );
   let printDays = [];
-  for (let i = 7; i > 0; i--) {
+  for (let i = 6; i > 0; i--) {
     printDays.push(
       moment().subtract(i, "days").format("L"),
       countPoint[i - 1],
@@ -25,6 +27,7 @@ export default function PastPoints() {
     <div>
       <div>
         <p>{formatToday}</p>
+        <p>{counter}</p>
         <h1>{totalPoint} Points</h1>
       </div>
       <div>

@@ -1,7 +1,10 @@
 import React from "react";
 import "./Form.scss";
+import { useDispatch } from "react-redux";
 
 function Form() {
+  const dispatch = useDispatch();
+
   return (
     <div className="form">
       <div className="form-header">
@@ -9,24 +12,36 @@ function Form() {
       </div>
       <p>Have you eaten vegetables today ?</p>
 
-      <button className="yes" type="button">
+      <button
+        className="yes"
+        type="button"
+        onClick={() => dispatch({ type: "INCREMENT50" })}
+      >
         YES
       </button>
       <button className="no" type="button">
         NO
       </button>
 
-      <p>Slow burning carbohydrates ?</p>
+      <p>Did you eat slow sugars</p>
 
-      <button className="yes" type="button">
+      <button
+        className="yes"
+        type="button"
+        onClick={() => dispatch({ type: "INCREMENT50" })}
+      >
         YES
       </button>
       <button className="no" type="button">
         NO
       </button>
-      <p>Any sweets ?</p>
+      <p>Any sweets (cake chocolates...) ?</p>
 
-      <button className="yes" type="button">
+      <button
+        className="yes"
+        type="button"
+        onClick={() => dispatch({ type: "DECREMENT10" })}
+      >
         YES
       </button>
       <button className="no" type="button">
