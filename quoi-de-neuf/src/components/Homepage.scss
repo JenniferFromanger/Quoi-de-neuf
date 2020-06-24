@@ -5,7 +5,7 @@
     margin-right: auto;
     margin-left: auto;
     font-weight: bold;
-    color:red;
+    color:#C3083F;
     font-style: italic;
 }
 
@@ -19,6 +19,7 @@
     background-color: black;
     width : 15vw;
     margin : 1vh 0;
+    border:none;
 }
 
 .GoButton {
@@ -28,6 +29,7 @@
     margin : 1vh 0;
     font-weight: bold;
     font-style: italic;
+    border:none;
 }
 
 input::placeholder {
