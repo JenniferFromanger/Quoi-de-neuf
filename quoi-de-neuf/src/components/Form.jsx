@@ -5,7 +5,13 @@ import { useDispatch, useSelector } from "react-redux";
 function Form() {
   const dispatch = useDispatch();
   const score = useSelector((state) => state.score);
-  const hasEatenVegetables = useSelector((state) => state.vegetablesToday);
+  const answerVegetable = useSelector((state) => state.vegetableToday);
+  const answerCarbohydrate = useSelector((state) => state.carbohydrateToday);
+  const answerSweet = useSelector((state) => state.sweetToday);
+  const answerExercice = useSelector((state) => state.exerciceToday);
+  const answerMedical = useSelector((state) => state.medicalToday);
+  const answerSmoke = useSelector((state) => state.smokeToday);
+  const answerDrink = useSelector((state) => state.drinkToday);
 
   return (
     <div className="form">
@@ -24,9 +30,9 @@ function Form() {
             points: 50,
           })
         }
-        disabled={hasEatenVegetables && "disabled"}
+        disabled={answerVegetable && "disabled"}
       >
-        YES {score}
+        YES
       </button>
       <button
         className="no"
@@ -38,21 +44,31 @@ function Form() {
             points: 0,
           })
         }
-        disabled={!hasEatenVegetables && "disabled"}
+        disabled={answerVegetable && "disabled"}
       >
         NO
       </button>
 
-      <p>Did you eat slow sugars</p>
+      <p>Did you eat carbohydrate ?</p>
 
       <button
         className="yes"
         type="button"
-        onClick={() => dispatch({ type: "INCREMENT50" })}
+        onClick={() =>
+          dispatch({ type: "ANSWER_CARBOHYDRATE", answer: true, points: 50 })
+        }
+        disabled={answerCarbohydrate && "disabled"}
       >
         YES
       </button>
-      <button className="no" type="button">
+      <button
+        className="no"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_CARBOHYDRATE", answer: true, points: 0 })
+        }
+        disabled={answerCarbohydrate && "disabled"}
+      >
         NO
       </button>
       <p>Any sweets (cake chocolates...) ?</p>
@@ -60,23 +76,127 @@ function Form() {
       <button
         className="yes"
         type="button"
-        onClick={() => dispatch({ type: "DECREMENT10" })}
+        onClick={() =>
+          dispatch({ type: "ANSWER_SWEET", answer: true, points: -10 })
+        }
+        disabled={answerSweet && "disabled"}
       >
         YES
       </button>
-      <button className="no" type="button">
+      <button
+        className="no"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_SWEET", answer: true, points: 50 })
+        }
+        disabled={answerSweet && "disabled"}
+      >
         NO
       </button>
       <p>How long did you exercice ?</p>
+      <button
+        className="yes"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 0 })
+        }
+        disabled={answerExercice && "disabled"}
+      >
+        0 min
+      </button>
+      <button
+        className="yes"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 30 })
+        }
+        disabled={answerExercice && "disabled"}
+      >
+        30 min
+      </button>
+      <button
+        className="yes"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 60 })
+        }
+        disabled={answerExercice && "disabled"}
+      >
+        1 h
+      </button>
+      <button
+        className="yes"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 90 })
+        }
+        disabled={answerExercice && "disabled"}
+      >
+        1 h30
+      </button>
       <p>Respected your medical prescription ?</p>
-      <button className="yes" type="button">
+      <button
+        className="yes"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_MEDICAL", answer: true, points: 50 })
+        }
+        disabled={answerMedical && "disabled"}
+      >
         YES
       </button>
-      <button className="no" type="button">
+      <button
+        className="no"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_MEDICAL", answer: true, points: -50 })
+        }
+        disabled={answerMedical && "disabled"}
+      >
         NO
       </button>
       <p>Smoked any cigarette ?</p>
+      <button
+        className="yes"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_SMOKE", answer: true, points: -20 })
+        }
+        disabled={answerSmoke && "disabled"}
+      >
+        YES
+      </button>
+      <button
+        className="no"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_SMOKE", answer: true, points: 20 })
+        }
+        disabled={answerSmoke && "disabled"}
+      >
+        NO
+      </button>
       <p>Drunk any alcohool ?</p>
+      <button
+        className="yes"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_DRINK", answer: true, points: -20 })
+        }
+        disabled={answerDrink && "disabled"}
+      >
+        YES
+      </button>
+      <button
+        className="no"
+        type="button"
+        onClick={() =>
+          dispatch({ type: "ANSWER_DRINK", answer: true, points: 20 })
+        }
+        disabled={answerDrink && "disabled"}
+      >
+        NO
+      </button>
     </div>
   );
 }
