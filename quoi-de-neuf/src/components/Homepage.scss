@@ -31,7 +31,9 @@
 }
 
 input::placeholder {
-    color:white;
+    color:rgb(194, 194, 194);
+    padding-left: 2vw;
+    align-content: center;
   }
 
   @media screen and (max-width: 767px)
@@ -58,6 +60,7 @@ input::placeholder {
         width : 80vw;
         height: 5vh;
         margin : 2vh 0;
+        border : none;
     }
     
     .GoButton {
@@ -68,5 +71,6 @@ input::placeholder {
         margin : 2vh 0;
         font-weight: bold;
         font-style: italic;
+        border:none;
     }
   }

@@ -28,8 +28,7 @@ function Homepage() {
             name="username"
             onChange={handleChange}
             value={username}
-            placeholder="Enter your 
-         pseudonym"
+            placeholder="FreddieMercury@health.com"
             required
           ></input>
           <input
