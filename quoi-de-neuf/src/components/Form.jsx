@@ -8,7 +8,6 @@ function Form() {
   const answerVegetable = useSelector((state) => state.vegetableToday);
   const answerCarbohydrate = useSelector((state) => state.carbohydrateToday);
   const answerSweet = useSelector((state) => state.sweetToday);
-  const answerExercice = useSelector((state) => state.exerciceToday);
   const answerMedical = useSelector((state) => state.medicalToday);
   const answerSmoke = useSelector((state) => state.smokeToday);
   const answerDrink = useSelector((state) => state.drinkToday);
@@ -81,7 +80,7 @@ function Form() {
         }
         disabled={answerSweet && "disabled"}
       >
-        YES
+        YES {score}
       </button>
       <button
         className="no"
@@ -94,46 +93,44 @@ function Form() {
         NO
       </button>
       <p>How long did you exercice ?</p>
-      <button
+
+      <input
         className="yes"
-        type="button"
-        onClick={() =>
-          dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 0 })
-        }
-        disabled={answerExercice && "disabled"}
-      >
-        0 min
-      </button>
-      <button
-        className="yes"
-        type="button"
+        type="radio"
+        name="exercice"
         onClick={() =>
           dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 30 })
         }
-        disabled={answerExercice && "disabled"}
-      >
-        30 min
-      </button>
-      <button
+      />
+      <label htmlFor="30">30 min</label>
+      <input
         className="yes"
-        type="button"
+        type="radio"
+        name="exercice"
         onClick={() =>
           dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 60 })
         }
-        disabled={answerExercice && "disabled"}
-      >
-        1 h
-      </button>
-      <button
+      />
+      <label htmlFor="1">1 h</label>
+
+      <input
         className="yes"
-        type="button"
+        type="radio"
+        name="exercice"
         onClick={() =>
           dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 90 })
         }
-        disabled={answerExercice && "disabled"}
-      >
-        1 h30
-      </button>
+      />
+      <label htmlFor="1h30"> 1 h30</label>
+      <input
+        className="yes"
+        type="radio"
+        name="exercice"
+        onClick={() =>
+          dispatch({ type: "ANSWER_EXERCICE", answer: false, points: 0 })
+        }
+      />
+      <label htmlFor="no">I don't practice exercice</label>
       <p>Respected your medical prescription ?</p>
       <button
         className="yes"
