@@ -1,11 +1,4 @@
 const store = {
-  vegetableToday: false,
-  carbohydrateToday: false,
-  sweetToday: false,
-  exerciceToday: false,
-  medicalToday: false,
-  smokeToday: false,
-  drinkToday: false,
   score: 0,
 };
 
