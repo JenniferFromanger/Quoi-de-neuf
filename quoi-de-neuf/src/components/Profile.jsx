@@ -12,7 +12,7 @@ export default function Profile() {
       <h1>{avatarLevel}</h1>
       <h2>{avatarComment}</h2>
       <div>
-        <Link to="/Total-Points">
+        <Link to="/Report">
           <p>Past Points</p>
           <img src="" alt="button to your past points" />
         </Link>
