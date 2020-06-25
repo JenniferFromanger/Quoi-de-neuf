@@ -8,6 +8,27 @@
   src: url("font/big_noodle_titling.ttf");
 }
 
+.title {
+  width: 90vw;
+  margin-top: 0;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  h1 {
+    text-align: center;
+    margin-right: auto;
+    margin-bottom: auto;
+  }
+
+  p {
+    font-family: "MyText";
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: lightgray;
+  }
+}
+
 .RockYourHealth {
   font-size: 1.3em;
   width: 80vw;

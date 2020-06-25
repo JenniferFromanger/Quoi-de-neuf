@@ -24,7 +24,12 @@ function Homepage() {
         alt="guitare"
         width="350px"
       />
-      <h1 className="RockYourHealth">Rock your health</h1>
+      <div className="title">
+        <h1 className="RockYourHealth">Rock your health</h1>
+
+        <p>Manage your diabetes and reveal the rockstar in you</p>
+      </div>
+
       <div>
         <form className="Form" onSubmit={handleSubmit}>
           <input
