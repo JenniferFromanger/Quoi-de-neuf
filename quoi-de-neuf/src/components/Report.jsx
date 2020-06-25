@@ -6,11 +6,12 @@ import "./Report.scss";
 
 export default function Report() {
   const score = useSelector((state) => state.score);
-  let countPoint = [score, 240.00, 230.00, 290.00, 130.00, 100.00, 200.00, 220.00];
+  let countPoint = [score, 240.0, 230.0, 290.0, 130.0, 100.0, 200.0, 220.0];
 
   const totalPoint = countPoint.reduce(
     (accumulator, currentValue) => accumulator + currentValue
   );
+
   let printDays = [];
   for (let i = 6; i >= 0; i--) {
     printDays.push(
@@ -19,6 +20,8 @@ export default function Report() {
       "PTS"
     );
   }
+
+  const pointLeft = 2000 - totalPoint;
 
   return (
     <div className="report">
@@ -37,7 +40,8 @@ export default function Report() {
       <div className="remainingpoints">
         <div className="txt">
           <h2>
-            Still <span className="ptlefts">7 points</span> left to be:
+            Still <span className="ptlefts">{pointLeft} points</span> left to
+            be:
           </h2>
           <p>International RockStar</p>
         </div>
@@ -47,6 +51,7 @@ export default function Report() {
             alt="avatar international RockStar"
             width="120px"
           />
+          <p>2000 PTS</p>
         </div>
       </div>
       <h2 className="separate">- - - - - - - - - - - - - - - - -</h2>

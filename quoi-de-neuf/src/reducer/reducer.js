@@ -1,5 +1,6 @@
 const store = {
   score: 0,
+  totalPoint: 1410,
 };
 
 const reducer = (state = { ...store }, action) => {
@@ -45,6 +46,11 @@ const reducer = (state = { ...store }, action) => {
         ...store,
         drinkToday: action.answer,
         score: state.score + action.points,
+      };
+    case "ADD_Points":
+      return {
+        ...store,
+        totalPoint: state.totalPoint + state.score,
       };
     default:
       return state;
