@@ -12,7 +12,7 @@ export default function Form6() {
         <h1>MY DAILY CHECK-UP</h1>
       </div>
       <div>
-        <img src="/no-smoke.png" alt="alcohol bottle" />
+        <img src="/no-smoke.png" alt="no-smoke picture" />
       </div>
       <div className="questions">
         <p>Smoked any cigarette ?</p>

@@ -11,27 +11,32 @@ export default function Form3() {
       <div className="form-header">
         <h1>MY DAILY CHECK-UP</h1>
       </div>
-      <p>Any sweets (cake chocolates...) ?</p>
-      <Link to="/Form/4">
-        <button
-          className="yes"
-          type="button"
-          onClick={() =>
-            dispatch({ type: "ANSWER_SWEET", answer: true, points: -10 })
-          }
-        >
-          YES
-        </button>
-        <button
-          className="no"
-          type="button"
-          onClick={() =>
-            dispatch({ type: "ANSWER_SWEET", answer: true, points: 50 })
-          }
-        >
-          NO
-        </button>
-      </Link>
+      <div>
+        <img src="/cake.png" alt="cake" />
+      </div>
+      <div className="questions">
+        <p>Any sweets (cake chocolates...) ?</p>
+        <Link to="/Form/4">
+          <button
+            className="yes"
+            type="button"
+            onClick={() =>
+              dispatch({ type: "ANSWER_SWEET", answer: true, points: -10 })
+            }
+          >
+            YES
+          </button>
+          <button
+            className="no"
+            type="button"
+            onClick={() =>
+              dispatch({ type: "ANSWER_SWEET", answer: true, points: 50 })
+            }
+          >
+            NO
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
