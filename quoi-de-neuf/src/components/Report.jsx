@@ -6,7 +6,7 @@ import "./Report.scss";
 
 export default function Report() {
   const score = useSelector((state) => state.score);
-  let countPoint = [score, 23, 52, 3, 0, 20, 52];
+  let countPoint = [score, 240.00, 230.00, 290.00, 130.00, 100.00, 200.00, 220.00];
 
   const totalPoint = countPoint.reduce(
     (accumulator, currentValue) => accumulator + currentValue

@@ -77,8 +77,16 @@
   }
 
   .Liste {
+    list-style-type:none;
     display: flex;
-    width: 70vw;
+    flex-wrap: wrap;
+    text-align: justify;
+    margin-left:12vw;
+    width: 65vw;
+  }
+
+  .Liste li {
+    padding-left: 7vw;
   }
 }
 
