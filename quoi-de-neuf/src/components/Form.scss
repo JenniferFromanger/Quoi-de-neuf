@@ -15,13 +15,26 @@ body {
   --neon-border-color: #08f;
   --neon2-text-color: #f40;
   --neon2-border-color: #f40;
+  height: 100vh;
 }
 
 .form {
+  height: 100vh;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
   p {
     font-family: "MyText";
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin-top: 30px;
+  }
+
+  img {
+    width: 200px;
+  }
+
+  .questions {
+    height: 40vh;
   }
 
   button {
