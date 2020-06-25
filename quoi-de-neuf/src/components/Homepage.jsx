@@ -18,7 +18,12 @@ function Homepage() {
   const { username, password } = values;
   return (
     <div className="Homepage">
-      <img className="Guitare" src="./guitare.png" alt="guitare" />
+      <img
+        className="Guitare"
+        src="./guitare.png"
+        alt="guitare"
+        width="350px"
+      />
       <h1 className="RockYourHealth">Rock your health</h1>
       <div>
         <form className="Form" onSubmit={handleSubmit}>
@@ -43,7 +48,9 @@ function Homepage() {
             required
           ></input>
           <Link to="/Profile">
-            <button className="GoButton" type="submit">GO</button>
+            <button className="GoButton" type="submit">
+              GO
+            </button>
           </Link>
         </form>
       </div>

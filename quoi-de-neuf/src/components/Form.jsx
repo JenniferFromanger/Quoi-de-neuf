@@ -20,7 +20,7 @@ function Form() {
       <p>Have you eaten vegetables today ?</p>
 
       <button
-        className="yes"
+        className={!answerVegetable ? "yes" : "done"}
         type="button"
         onClick={() =>
           dispatch({
@@ -34,7 +34,7 @@ function Form() {
         YES
       </button>
       <button
-        className="no"
+        className={!answerVegetable ? "no" : "done"}
         type="button"
         onClick={() =>
           dispatch({

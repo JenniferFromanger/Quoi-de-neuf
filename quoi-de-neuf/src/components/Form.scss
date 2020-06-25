@@ -8,6 +8,11 @@
   src: url("font/big_noodle_titling.ttf");
 }
 
+body {
+  color: #fff;
+  background-color: #000;
+}
+
 .form {
   p {
     font-family: "MyText";
@@ -20,9 +25,10 @@
     width: 100px;
     height: 50px;
     border: 0;
-    color: #fff;
+    color: #000;
     font-weight: 900;
   }
+
   .yes {
     background-color: #347b2d;
 
@@ -30,7 +36,9 @@
       background-color: #29c01a;
     }
   }
-
+  .done {
+    background-color: grey;
+  }
   .no {
     background-color: #c3083f;
 
