@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Profile.scss";
+import { useSelector } from "react-redux";
 
 export default function Profile() {
+  const totalPoint = useSelector((state) => state.totalPoint);
   const [avatarLevel, setAvatarLevel] = useState("Rock Star Wannabe");
-  const [avatarComment, setAvatarComment] = useState(
+  const [avatarQuote, setAvatarQuote] = useState(
     "'I won't be a Rock Star. I will be a Legend' - Freddie Mercury"
   );
+  const setNewLevel = () => {
+    setAvatarLevel("International RockStar");
+    setAvatarQuote(
+      "I didn't know how to deal with success. If there was a Rock Star 101, I would have liked to take it. It might have helped me. Kurt Cobain"
+    );
+  };
   return (
     <div className="profile ">
       <h1>{avatarLevel}</h1>
       <img src="./avatar1.png" alt="avatar rock" width="200px" />
 
-      <p className="quote">{avatarComment}</p>
+      <p className="quote">{totalPoint < 2000 ? avatarQuote : setNewLevel}</p>
 
       <div className="button-profil">
         <div>
