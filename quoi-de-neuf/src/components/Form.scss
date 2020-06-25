@@ -31,12 +31,20 @@
     }
   }
 
+  .done {
+    background-color: grey;
+  }
+
   .no {
     background-color: #c3083f;
 
     &:hover {
       background-color: #f50029;
     }
+  }
+
+  .done_no {
+    background-color: grey;
   }
 }
 

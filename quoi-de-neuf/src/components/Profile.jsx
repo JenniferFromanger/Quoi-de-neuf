@@ -18,8 +18,10 @@ export default function Profile() {
         </Link>
       </div>
       <div>
-        <p>How was your day?</p>
-        <img src="" alt="button to your day information" />
+        <Link to="/Form/1">
+          <p>How was your day?</p>
+          <img src="" alt="button to your day information" />
+        </Link>
       </div>
     </div>
   );
