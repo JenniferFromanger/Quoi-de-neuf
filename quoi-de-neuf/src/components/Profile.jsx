@@ -16,7 +16,7 @@ export default function Profile() {
 
       <div className="button-profil">
         <div>
-          <Link to="/Total-Points">
+          <Link to="/Report">
             <button src="" alt="button to your past points">
               MY REPORT
             </button>
