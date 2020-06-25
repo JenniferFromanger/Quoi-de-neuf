@@ -2,6 +2,7 @@ import React from "react";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./Report.scss";
 
 export default function Report() {
   const score = useSelector((state) => state.score);
@@ -20,24 +21,38 @@ export default function Report() {
   }
 
   return (
-    <div>
+    <div className="report">
       <div>
         <h1>Total Today</h1>
-        <p>{score} PTS</p>
+        <p className="score">- - - - - {score} PTS - - - - -</p>
       </div>
-      <div>
+      <div className="tickets">
         <h2>Your Rewards</h2>
-        <img src="" alt="place de concert" />
-        <img src="" alt="place de concert" />
+        <img src="ticket.png" alt="concert place" width="50px" />
+        <img src="ticket.png" alt="concert place" width="50px" />
       </div>
-      <div>
-        <h2>Still 7 points left to be</h2>
-        <p>Internationnal RockStar</p>
-        <img src="./avatar3.png" alt="avatar internationnal RockStar" />
+
+      <h2 className="separate">- - - - - - - - - - - - - - - - -</h2>
+
+      <div className="remainingpoints">
+        <div className="txt">
+          <h2>
+            Still <span className="ptlefts">7 points</span> left to be:
+          </h2>
+          <p>International RockStar</p>
+        </div>
+        <div className="avatarnext">
+          <img
+            src="./avatar3.png"
+            alt="avatar international RockStar"
+            width="120px"
+          />
+        </div>
       </div>
-      <div>
-        <h2>Past Points</h2>
-        <ul>
+      <h2 className="separate">- - - - - - - - - - - - - - - - -</h2>
+      <div className="historic">
+        <h3>Past Points</h3>
+        <ul className="Liste">
           {printDays.map((day, i) => (
             <li key={i}>{day}</li>
           ))}
