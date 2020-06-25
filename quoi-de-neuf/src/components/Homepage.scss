@@ -18,9 +18,13 @@
   margin-bottom: 30px;
   font-weight: bold;
   color: #fff;
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+  --neon2-text-color: #f40;
+  --neon2-border-color: #f40;
   font-style: italic;
   font-family: "titleFont";
-  animation: neon 0.08s ease-in-out infinite alternate;
+  animation: flicker1 1.5s infinite alternate;
 }
 
 .Form {
@@ -61,15 +65,20 @@ input::placeholder {
   }
 
   .RockYourHealth {
+    font-size: 1.3em;
     width: 80vw;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-weight: bold;
-
+    color: #fff;
     font-style: italic;
-    margin-top: 9vh;
+    font-family: "titleFont";
+    animation: neon 0.08s ease-in-out infinite alternate;
   }
+
 
   .Login {
     width: 80vw;
@@ -80,12 +89,22 @@ input::placeholder {
   }
 
   .GoButton {
-    width: 80vw;
+    justify-content: center;
+    font-size: 10px;
+    width: 40vw;
     height: 5vh;
     margin: 2vh 0;
     font-weight: bold;
-    font-style: italic;
     border: none;
+    letter-spacing: 2px;
+    color: #fff;
+    --neon-text-color: rgb(25, 0, 255);
+    --neon-border-color: rgb(255, 0, 0);
+    --neon2-text-color: rgb(4, 0, 255);
+    --neon2-border-color: rgb(4, 0, 255);
+    font-style: italic;
+    font-family: "titleFont";
+    animation: flicker1 1.5s infinite alternate;
   }
 }
 
