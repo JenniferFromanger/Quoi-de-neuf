@@ -13,43 +13,43 @@ export default function Form4() {
       </div>
       <p>How long did you exercice ?</p>
       <Link to="/Form/5">
-        <input
+        <button
           className="yes"
-          type="radio"
-          name="exercice"
+          type="button"
           onClick={() =>
             dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 30 })
           }
-        />
-        <label htmlFor="30">30 min</label>
-        <input
+        >
+          30 min
+        </button>
+        <button
           className="yes"
-          type="radio"
-          name="exercice"
+          type="button"
           onClick={() =>
             dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 60 })
           }
-        />
-        <label htmlFor="1">1 h</label>
+        >
+          1 h
+        </button>
 
-        <input
+        <button
           className="yes"
-          type="radio"
-          name="exercice"
+          type="button"
           onClick={() =>
             dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 90 })
           }
-        />
-        <label htmlFor="1h30"> 1 h30</label>
-        <input
-          className="yes"
-          type="radio"
-          name="exercice"
+        >
+          1 h30
+        </button>
+        <button
+          className="no"
+          type="button"
           onClick={() =>
             dispatch({ type: "ANSWER_EXERCICE", answer: false, points: 0 })
           }
-        />
-        <label htmlFor="no">I don't practice exercice</label>
+        >
+          What ?
+        </button>
       </Link>
     </div>
   );

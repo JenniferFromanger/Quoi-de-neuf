@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Homepage from "./components/Homepage";
 import Profile from "./components/Profile";
-import TotalPoints from "./components/TotalPoints";
+import Report from "./components/Report";
 import Form1 from "./components/Form1";
 import Form2 from "./components/Form2";
 import Form3 from "./components/Form3";
@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/Profile" component={Profile} />
-          <Route path="/Total-Points" component={TotalPoints} />
+          <Route path="/Report" component={Report} />
           <Route path={`/Form/1`} component={Form1} />
           <Route path={`/Form/2`} component={Form2} />
           <Route path={`/Form/3`} component={Form3} />
