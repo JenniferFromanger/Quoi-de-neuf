@@ -28,6 +28,7 @@ function Homepage() {
       <div>
         <form className="Form" onSubmit={handleSubmit}>
           <input
+            type="text"
             className="Login"
             id="username"
             name="username"
@@ -40,16 +41,15 @@ function Homepage() {
             className="Login"
             id="password"
             name="password"
-            type="password"
+            type="text"
             onChange={handleChange}
             value={password}
-            placeholder="Enter your 
-         password"
+            placeholder="************"
             required
           ></input>
           <Link to="/Profile">
             <button className="GoButton" type="submit">
-              GO
+              LOG AND ROCK
             </button>
           </Link>
         </form>

@@ -31,7 +31,7 @@
 }
 
 .Login {
-  background-color: #444444;
+  background-color: #fff;
   width: 15vw;
   margin: 1vh 0;
   border: none;
@@ -52,16 +52,24 @@
   --neon-border-color: rgb(255, 0, 0);
   --neon2-text-color: rgb(4, 0, 255);
   --neon2-border-color: rgb(4, 0, 255);
-  font-style: italic;
-  font-family: "titleFont";
+
+  // font-family: "titleFont";
   animation: flicker1 1.5s infinite alternate;
 }
 
+.placeholder {
+  background-color: #fff;
+}
+
 input::placeholder {
-  background-color: #444444;
+  background-color: #fff;
   color: #929292;
   padding-left: 2vw;
   align-content: center;
+}
+
+input {
+  background-color: #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -84,7 +92,6 @@ input::placeholder {
     animation: neon 0.08s ease-in-out infinite alternate;
   }
 
-
   .Login {
     width: 80vw;
     height: 5vh;
@@ -102,13 +109,11 @@ input::placeholder {
     font-weight: bold;
     border: none;
     letter-spacing: 2px;
-    color: #fff;
+
     --neon-text-color: rgb(25, 0, 255);
     --neon-border-color: rgb(255, 0, 0);
     --neon2-text-color: rgb(4, 0, 255);
     --neon2-border-color: rgb(4, 0, 255);
-    font-style: italic;
-    font-family: "titleFont";
     animation: flicker1 1.5s infinite alternate;
   }
 }

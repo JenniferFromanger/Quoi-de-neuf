@@ -8,7 +8,7 @@ export default function Profile() {
     "'I won't be a Rock Star. I will be a Legend' - Freddie Mercury"
   );
   return (
-    <div className="profile">
+    <div className="profile ">
       <h1>{avatarLevel}</h1>
       <img src="./avatar1.png" alt="avatar rock" width="200px" />
 
@@ -17,7 +17,7 @@ export default function Profile() {
       <div className="button-profil">
         <div>
           <Link to="/Report">
-            <button src="" alt="button to your past points">
+            <button src="" alt="button to your past points" className="shine">
               MY REPORT
             </button>
           </Link>
