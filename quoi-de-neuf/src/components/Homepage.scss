@@ -1,78 +1,106 @@
+@font-face {
+  font-family: "titleFont";
+  src: url("font/Rockit.ttf");
+}
+
+@font-face {
+  font-family: "MyText";
+  src: url("font/big_noodle_titling.ttf");
+}
+
 .RockYourHealth {
-    font-size: 6vh;
-    width: 15vw;
+  font-size: 1.3em;
+  width: 15vw;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #fff;
+  font-style: italic;
+  font-family: "titleFont";
+  animation: neon 0.08s ease-in-out infinite alternate;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #929292;
+}
+
+.Login {
+  background-color: #444444;
+  width: 15vw;
+  margin: 1vh 0;
+  border: none;
+  color: #929292;
+}
+
+.GoButton {
+  width: 15vw;
+  background-color: #fff;
+  color: black;
+  margin: 1vh 0;
+  font-weight: bold;
+  font-style: italic;
+  border: none;
+}
+
+input::placeholder {
+  background-color: #444444;
+  color: #929292;
+  padding-left: 2vw;
+  align-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .Guitare {
+    width: 50vw;
+  }
+
+  .RockYourHealth {
+    font-size: 9vh;
+    width: 80vw;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
     font-weight: bold;
-    color:#C3083F;
+    color: #c3083f;
     font-style: italic;
-}
+    margin-top: 3vh;
+  }
 
-.Form {
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-}
+  .Login {
+    width: 80vw;
+    height: 5vh;
+    margin: 2vh 0;
+    border: none;
+    color: #929292;
+  }
 
-.Login {
-    background-color: black;
-    width : 15vw;
-    margin : 1vh 0;
-    border:none;
-}
-
-.GoButton {
-    width : 15vw;
-    background-color: #9DAABB;
-    color : white;
-    margin : 1vh 0;
+  .GoButton {
+    width: 80vw;
+    height: 5vh;
+    margin: 2vh 0;
     font-weight: bold;
     font-style: italic;
-    border:none;
+    border: none;
+  }
 }
 
-input::placeholder {
-    color:rgb(194, 194, 194);
-    padding-left: 2vw;
-    align-content: center;
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
   }
-
-  @media screen and (max-width: 767px)
-  {
-
-    .Guitare{
-        width: 50vw;
-    }
-
-    .RockYourHealth {
-        font-size: 9vh;
-        width: 80vw;
-        text-align: center;
-        margin-right: auto;
-        margin-left: auto;
-        font-weight: bold;
-        color:#C3083F;
-        font-style: italic;
-        margin-top: 3vh;
-    }
-    
-    .Login {
-        background-color: #444444;
-        width : 80vw;
-        height: 5vh;
-        margin : 2vh 0;
-        border : none;
-    }
-    
-    .GoButton {
-        width : 80vw;
-        height: 5vh;
-        background-color: #9DAABB;
-        color : white;
-        margin : 2vh 0;
-        font-weight: bold;
-        font-style: italic;
-        border:none;
-    }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+      0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+      0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+      0 0 60px rgba(30, 132, 242, 1);
   }
+}
