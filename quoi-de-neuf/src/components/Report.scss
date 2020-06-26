@@ -79,16 +79,32 @@
   }
 
   .Liste {
-    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     text-align: justify;
-    margin-left: 30vw;
-    width: 35vw;
+    margin-left: 39vw;
+    width: 65vw;
   }
 
+  .SousListe {
+    list-style-type: none;
+    width:8vw;
+    padding: 0;
+  }
+
+  .Points {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    width: 16vw;
+  }
+  /*.SousListeNum {
+    list-style-type: none;
+    width:8vw;
+  }*/
+
   .Liste li {
-    padding-left: 7vw;
+    padding-left: 1vw;
   }
 }
 
@@ -159,20 +175,26 @@
         animation: neon 0.08s ease-in-out infinite alternate;
         font-size: 3em;
         margin-bottom: 40px;
+        
       }
     }
 
     .Liste {
-      list-style-type: none;
       display: flex;
       flex-wrap: wrap;
       text-align: justify;
-      margin-left: 11vw;
-      width: 65vw;
+      margin-left: 20vw;
+      width: 85vw;
     }
 
+    .SousListe {
+      list-style-type: none;
+      width:25vw;
+      padding: 0;
+    }  
+
     .Liste li {
-      padding-left: 7vw;
+      padding-left: 1vw;
     }
   }
 }
