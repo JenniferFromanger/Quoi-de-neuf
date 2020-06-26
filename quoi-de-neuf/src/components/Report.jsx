@@ -7,7 +7,7 @@ import "./Report.scss";
 export default function Report() {
   const score = useSelector((state) => state.score);
 
-  let countPoint = [score, 240.0, 230.0, 290.0, 130.0, 100.0, 200.0, 220.0];
+  let countPoint = [240.0, 230.0, 290.0, 130.0, 100.0, 200.0, score];
 
   const totalPoint = countPoint.reduce(
     (accumulator, currentValue) => accumulator + currentValue
@@ -15,12 +15,10 @@ export default function Report() {
 
   let printDays = [];
   for (let i = 6; i >= 0; i--) {
-    printDays.push(
-      moment().subtract(i, "days").format("L"),
-      countPoint[i],
-      "PTS"
-    );
+    printDays.push(moment().subtract(i, "days").format("L"));
   }
+
+  let printPTS = ["PTS", "PTS", "PTS", "PTS", "PTS", "PTS", "PTS"];
 
   const pointLeft = 2000 - totalPoint;
 
@@ -61,6 +59,16 @@ export default function Report() {
         <ul className="Liste">
           {printDays.map((day, i) => (
             <li key={i}>{day}</li>
+          ))}
+        </ul>
+        <ul className="Liste">
+          {countPoint.map((num, i) => (
+            <li key={i}>{num}</li>
+          ))}
+        </ul>
+        <ul>
+          {printPTS.map((point, i) => (
+            <li key={i}>{point}</li>
           ))}
         </ul>
         <p>Total Points {totalPoint} PTS</p>
