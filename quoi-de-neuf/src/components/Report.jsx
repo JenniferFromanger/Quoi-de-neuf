@@ -57,24 +57,22 @@ export default function Report() {
       <div className="historic">
         <h3>Past Points</h3>
         <div className="Liste">
-          <ul className="SousListe">
+          <ul className="Date">
             {printDays.map((day, i) => (
               <li key={i}>{day}</li>
             ))}
           </ul>
-          <div className="Points">
-            <ul className="SousListe">
+            <ul className="SousListePoint">
               {countPoint.map((num, i) => (
                 <li key={i}>{num}</li>
               ))}
             </ul>
-            <ul className="SousListe">
+            <ul className="SousListePoint">
               {printPTS.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
-          </div>
-          </div>
+        </div>
         <p>Total Points {totalPoint} PTS</p>
       </div>
       <Link to="/Profile">
