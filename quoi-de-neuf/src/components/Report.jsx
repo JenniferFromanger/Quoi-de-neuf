@@ -44,7 +44,7 @@ export default function Report() {
             Still <span className="ptlefts">{pointLeft} points</span> left to
             be:
           </h2>
-          <p>International RockStar</p>
+          <p className="NextTitle">International RockStar</p>
         </div>
         <div className="avatarnext">
           <img
