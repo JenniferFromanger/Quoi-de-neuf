@@ -17,9 +17,10 @@ export default function Report() {
   for (let i = 6; i >= 0; i--) {
     printDays.push(moment().subtract(i, "days").format("L"));
   }
-
-  let printPTS = ["PTS", "PTS", "PTS", "PTS", "PTS", "PTS", "PTS"];
-
+  let printPTS = [];
+  for (let i = 0; i < 7; i++) {
+    printPTS.push("PTS");
+  }
   const pointLeft = 2000 - totalPoint;
 
   return (
