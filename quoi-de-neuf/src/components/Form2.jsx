@@ -34,7 +34,11 @@ export default function Form2() {
             className="no"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_CARBOHYDRATE", answer: true, points: 0 })
+              dispatch({
+                type: "ANSWER_CARBOHYDRATE",
+                answer: false,
+                points: 0,
+              })
             }
           >
             NO

@@ -36,7 +36,7 @@ function Form() {
             onClick={() =>
               dispatch({
                 type: "ANSWER_VEGETABLE",
-                answer: true,
+                answer: false,
                 points: 0,
               })
             }

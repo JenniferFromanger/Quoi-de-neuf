@@ -30,7 +30,7 @@ export default function Form6() {
             className="no"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_SMOKE", answer: true, points: 20 })
+              dispatch({ type: "ANSWER_SMOKE", answer: false, points: 40 })
             }
           >
             NO

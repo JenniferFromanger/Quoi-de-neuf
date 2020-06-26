@@ -21,7 +21,7 @@ export default function Form5() {
             className="yes"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_MEDICAL", answer: true, points: 50 })
+              dispatch({ type: "ANSWER_MEDICAL", answer: true, points: 80 })
             }
           >
             YES
@@ -30,7 +30,7 @@ export default function Form5() {
             className="no"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_MEDICAL", answer: true, points: -50 })
+              dispatch({ type: "ANSWER_MEDICAL", answer: false, points: -50 })
             }
           >
             NO

@@ -21,7 +21,7 @@ export default function Form7() {
             className="yes"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_DRINK", answer: true, points: -20 })
+              dispatch({ type: "ANSWER_DRINK", answer: true, points: -10 })
             }
           >
             YES
@@ -30,7 +30,7 @@ export default function Form7() {
             className="no"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_DRINK", answer: true, points: 20 })
+              dispatch({ type: "ANSWER_DRINK", answer: false, points: 50 })
             }
           >
             NO

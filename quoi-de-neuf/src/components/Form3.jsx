@@ -30,7 +30,7 @@ export default function Form3() {
             className="no"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_SWEET", answer: true, points: 50 })
+              dispatch({ type: "ANSWER_SWEET", answer: false, points: 50 })
             }
           >
             NO

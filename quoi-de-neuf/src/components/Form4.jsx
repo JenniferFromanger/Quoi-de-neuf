@@ -21,7 +21,7 @@ export default function Form4() {
             className="yes"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 30 })
+              dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 60 })
             }
           >
             30 min
@@ -30,7 +30,7 @@ export default function Form4() {
             className="yes"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 60 })
+              dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 90 })
             }
           >
             1 h
@@ -40,7 +40,7 @@ export default function Form4() {
             className="yes"
             type="button"
             onClick={() =>
-              dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 90 })
+              dispatch({ type: "ANSWER_EXERCICE", answer: true, points: 100 })
             }
           >
             1 h30
