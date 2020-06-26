@@ -46,7 +46,7 @@ function Homepage() {
             className="Login"
             id="password"
             name="password"
-            type="text"
+            type="password"
             onChange={handleChange}
             value={password}
             placeholder="************"
